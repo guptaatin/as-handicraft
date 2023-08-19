@@ -99,8 +99,8 @@ const Handicrafts = (props) => {
                                     <AppstoreOutlined className="sort-icon" />
                                 </div>
                             </Row>
-                            <Link to="#">
                                 <Row className="cards-row">
+                            <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
@@ -108,34 +108,40 @@ const Handicrafts = (props) => {
                                     >
                                         <Meta title="Centenarian Brass Metal Bag" description="₹ 1999" style={{fontSize:'2.0rem'}} />
                                     </Card>
+                            </Link>
+                            <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={pen} className="items-img" />}
                                     >
                                         <Meta title="Beautiful Hand Carved With Brass Design Walking Stick 22 Inch" description="₹ 1499" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={mens} className="items-img" />}
                                     >
                                         <Meta title="Brass Statue Tribal Men Figurine Set Of 3 Pcs Home Decorative Handicrafts Corporate Showpiece Christmas & New Year Gift" description="₹ 3606" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={pooja_deep} className="items-img" />}
                                     >
                                         <Meta title="Brass Pooja Deep" description="₹ 699" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={ganesh} className="items-img" />}
                                     >
                                         <Meta title="Decorative Shree Ganesha Face Brass Handicraft Wall Hanging Product" description="₹ 775" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
@@ -143,50 +149,56 @@ const Handicrafts = (props) => {
                                     >
                                         <Meta title="Brass Vintage Canon Tope Showpiece Product" description="₹ 789" style={{fontSize:'2.0rem'}} />
                                     </Card>
+                                    </Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={toup} className="items-img" />}
                                     >
                                         <Meta title="Brass Vintage Canon Tope Showpiece" description="₹ 789" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={ganesh_coin} className="items-img" />}
                                     >
                                         <Meta title="Decorative Brass Ganesh Face Wall Hanging Handicrafts Product" description="₹ 1580" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={horse} className="items-img" />}
                                     >
                                         <Meta title="Brass Handicraft Horse" description="₹ 650" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={camel} className="items-img" />}
                                     >
                                         <Meta title="Gemstone Studded Pure Brass Camel Handicraft" description="₹ 307" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={telescope} className="items-img" />}
                                     >
                                         <Meta title="Handcrafted Nautical Decor Floor Standing Admirals Brass/leather Binoculars 62 Brass By Handcrafted Model Ships" description="₹ 42787" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
+                                    <Link to="/handicraft_item">
                                     <Card
                                         hoverable
                                         style={{ width: 240, margin: '20px 2px', borderRadius: '10px' }}
                                         cover={<img alt="example" src={wheel} className="items-img" />}
                                     >
                                         <Meta title="Deluxe Class Wood And Brass Decorative Ship Wheel 36 Nautical Home Decora" description="₹ 4000" style={{fontSize:'2.0rem'}} />
-                                    </Card>
+                                    </Card></Link>
                                 </Row>
-                            </Link>
                         </div>
                     </Col>
                 </Row>

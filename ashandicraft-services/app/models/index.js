@@ -1,15 +1,9 @@
 const dbConfig = require("../config/db.config.js");
-
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
   dialect: dbConfig.dialect,
   operatorsAliases: false,
-  define: {
-    underscored: false,
-    freezeTableName: true, //use singular table name
-    timestamps: false,  // I do not want timestamp fields by default
-  },
   pool: {
     max: dbConfig.pool.max,
     min: dbConfig.pool.min,
@@ -17,12 +11,8 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     idle: dbConfig.pool.idle
   }
 });
-
 const db = {};
-
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
-db.users = require("./users.model")(sequelize, Sequelize);
-
+db.users = require("./user.model.js")(sequelize, Sequelize);
 module.exports = db;

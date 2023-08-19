@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactSlickExample from './ReactSlickExample';
 import { Image, Popover } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import "./handicraft_item.css";
 import './example.css';
 import {
@@ -24,8 +24,14 @@ const content = (
 
 /* --------------component ItemCardSection Starts-------------- */
 
-export default class ItemCardSection extends Component {
-    render() {
+const ItemCardSection = () => {
+    const history = useHistory()
+    const handleCart = () => {
+        history.push("/cart")
+    }
+    const handleCheckout = () => {
+        history.push("/checkout_flow")
+    }
         return (
             <div className="fluid react-slick">
                 <div className="fluid__image-container">
@@ -68,8 +74,8 @@ export default class ItemCardSection extends Component {
                     </div>
                     <div className="item-buttons">
                         <ul>
-                            <li><button className="button"><ShoppingCartOutlined /> GO TO CART</button></li>
-                            <li><button className="button"><CaretRightOutlined /> BUY NOW</button></li>
+                            <li><button className="button" onClick={handleCart}><ShoppingCartOutlined /> GO TO CART</button></li>
+                            <li><button className="button" onClick={handleCheckout}><CaretRightOutlined /> BUY NOW</button></li>
                         </ul>
                         <h2><SafetyOutlined />&nbsp;&nbsp;Safe and Secure payments.100% Authentic products</h2>
                     </div>
@@ -84,7 +90,8 @@ export default class ItemCardSection extends Component {
                 </div>
             </div>
         );
-    }
 }
+
+export default ItemCardSection
 
 /* --------------component ItemCardSection Ends-------------- */

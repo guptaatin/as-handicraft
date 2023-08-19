@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Row, Col, Breadcrumb, Button, Table, Image } from 'antd';
 import new_bag from '../../images/new_bag.jpg';
 import cart from '../../images/cart.png';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import "./order_confirmation.css";
 import {
     EnvironmentOutlined, ScheduleOutlined, CreditCardOutlined
@@ -53,6 +53,11 @@ const Order_Confirmation = (props) => {
     useEffect(() => {
         props.title && (document.title = props.title);
     })
+
+    const history = useHistory()
+    const handleContinue = () => {
+        history.push("/handicrafts")
+    }
 
     return (
         <React.Fragment>
@@ -154,8 +159,8 @@ const Order_Confirmation = (props) => {
                                     <li><h1>₹ 1,999</h1></li>
                                 </ul>
                                 <p>INCLUSIVE OF ALL TAXES</p>
-                                <Button className="order-checkout-btn">Continue Shopping</Button>
-                                <Link to="#" className="go-to-order">GO TO MY ORDER</Link>
+                                <Button className="order-checkout-btn" onClick={handleContinue}>Continue Shopping</Button>
+                                <Link to="/my_orders" className="go-to-order">GO TO MY ORDER</Link>
                             </div>
                         </div>
                     </Col>

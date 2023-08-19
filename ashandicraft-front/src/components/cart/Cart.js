@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Select, Breadcrumb, Button, Table, Image, Modal, Input } from 'antd';
 import coupon from '../../images/coupon.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import "./cart.css";
 import {
     EnvironmentTwoTone, RightOutlined, LeftOutlined
@@ -19,6 +19,7 @@ const Cart = (props) => {
     })
 
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const history = useHistory()
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -26,6 +27,9 @@ const Cart = (props) => {
     const handleCancel = () => {
         setIsModalVisible(false);
     };
+    const handleCheckout = () => {
+        history.push("/checkout_flow")
+    }
     return (
         <React.Fragment>
             <section className="breadcrumb">
@@ -91,7 +95,7 @@ const Cart = (props) => {
                                     <li><h1>₹ 1,999</h1></li>
                                 </ul>
                                 <p>INCLUSIVE OF ALL TAXES</p>
-                                <Button className="cart-checkout-btn">CHECKOUT</Button>
+                                <Button className="cart-checkout-btn" onClick={handleCheckout}>CHECKOUT</Button>
                             </div>
                         </div>
                     </Col>

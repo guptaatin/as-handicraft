@@ -151,7 +151,7 @@ const Header = () => {
 									</Link>
 								</Menu.Item>
 								<Menu.Item key="inventory">
-									<Link to="#">
+									<Link to="my_orders">
 										<span className="menu-first-icon">
 											<ShopOutlined />
 										</span>
@@ -348,13 +348,13 @@ const Header = () => {
 						<div className="socal-icons-home">
 							<Menu mode="horizontal">
 								<Menu.Item key="home">
-									<Link to="#">Home</Link>
+									<Link to="/">Home</Link>
 								</Menu.Item>
 								<Menu.Item key="inventory">
-									<Link to="#">Handicrafts</Link>
+									<Link to="/handicrafts">Handicrafts</Link>
 								</Menu.Item>
 								<Menu.Item key="buy">
-									<Link to="#">Deal of the Day</Link>
+									<Link to="/wishlist">Deal of the Day</Link>
 								</Menu.Item>
 								<SubMenu key="SubMenu" title="More">
 									<Menu.ItemGroup title="Item 1">

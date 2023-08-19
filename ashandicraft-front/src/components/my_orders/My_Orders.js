@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Row, Col, Breadcrumb, Image, Button } from 'antd';
 import new_bag from '../../images/new_bag.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './my_orders.css';
 
 /* ---------------------component My_Orders starts------------------------*/
@@ -11,6 +11,12 @@ const My_Orders = (props) => {
     useEffect(() => {
         props.title && (document.title = props.title);
     });
+
+    const history = useHistory();
+
+    const handleOrderDetails = () => {
+        history.push("/order_detail")
+    }
 
     return (
         <React.Fragment>
@@ -47,7 +53,7 @@ const My_Orders = (props) => {
                                         </div>
                                     </li>
                                     <li>
-                                        <Button className="details-btn">Details</Button>
+                                        <Button className="details-btn" onClick={handleOrderDetails}>Details</Button>
                                     </li>
                                 </ul>
                             </div>
@@ -93,7 +99,7 @@ const My_Orders = (props) => {
                                         </div>
                                     </li>
                                     <li>
-                                        <Button className="details-btn">Details</Button>
+                                        <Button className="details-btn" onClick={handleOrderDetails}>Details</Button>
                                     </li>
                                 </ul>
                             </div>

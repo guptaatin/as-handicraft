@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Breadcrumb, Button, Image, Modal } from 'antd';
 import new_bag from '../../images/new_bag.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import "./order_detail.css";
 import {
     CloseCircleFilled, CreditCardOutlined
@@ -21,6 +21,7 @@ const Order_Detail = (props) => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isCancelModalVisible, setIsCancelModalVisible] = useState(false);
     const [orderCancel, setOrderCancel] = useState(false);
+    const history = useHistory()
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -36,6 +37,10 @@ const Order_Detail = (props) => {
         setIsCancelModalVisible(false);
         setOrderCancel(true);
     };
+
+    const handleOrderAwaiting = () => {
+        history.push("/order_confirmation")
+    }
 
     return (
         <React.Fragment>
@@ -56,7 +61,7 @@ const Order_Detail = (props) => {
                                 <div className="order-awaiting">
                                     <ul>
                                         <li><p>ORDER ID: <span>#3</span> Placed on 28 Jul '21, 10:38 pm</p></li>
-                                        <li><h4>ORDER AWAITING CONFIRMATION</h4></li>
+                                        <li onClick={handleOrderAwaiting}><h4>ORDER AWAITING CONFIRMATION</h4></li>
                                     </ul>
                                 </div>
                             </Col>

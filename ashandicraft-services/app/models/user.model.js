@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-	const Users = sequelize.define("users", {
+	const User = sequelize.define("user", {
 		UserId: {
 			type: Sequelize.INTEGER,
 			primaryKey: true,
@@ -40,21 +40,8 @@ module.exports = (sequelize, Sequelize) => {
 		IsMobileVerified: {
 			type: Sequelize.ENUM("1", "0"),
 			defaultValue: "0",
-		},
-		Status: {
-			type: Sequelize.ENUM("1", "0"),
-			defaultValue: "0",
-		},
-		created_date: {
-			type: Sequelize.DATE,
-			defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-		},
-		updated_date: {
-			type: Sequelize.DATE,
-			defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
-			onUpdate: Sequelize.literal("CURRENT_TIMESTAMP"),
-		},
+		}
 	});
 
-	return Users;
+	return User;
 };
