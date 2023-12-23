@@ -4,69 +4,82 @@
   background-color: #fff;
   border-bottom: 2px solid #dfdfdf;
 }
+
 /* ------------------------breadcrumb css ends----------------------*/
 
 /* ----------------------------header css starts------------------------*/
 ul {
   list-style-type: none;
-  padding:0px;
-  margin-bottom:0px;
+  padding: 0px;
+  margin-bottom: 0px;
 }
+
 .menu {
   margin-left: -160px;
 }
+
 .menu-login {
   margin-left: 0px;
 }
+
 .menu-login ul {
   display: flex;
   margin-bottom: 0px;
   margin-top: 10px;
 }
+
 .menu-login ul li a {
   color: #b38620f0;
   font-size: 15px;
   padding: 2px 10px;
 }
+
 .menu-login span {
   padding: 2px 3px;
 }
+
 .modal-left h1 {
   font-size: 2.0rem;
   color: lightgreen;
   border-bottom: 3px solid #f0f0f0;
   padding-bottom: 10px;
 }
+
 .modal-left p {
   font-size: 1.0rem;
   color: lightgreen;
   margin-bottom: 100px;
 }
+
 .modal-name {
   font-size: 5.0rem;
-  margin: 50px 0px 50px 30px;
+  margin: 50px 30px 50px 10px;
   background-color: green;
-  padding: 0px 35px;
+  padding: 0px 60px;
   color: #fff;
   border-radius: 50%;
 }
+
 .modal-vertical {
   border-left: 1px solid black;
-  height: 528px;
+  height: 505px;
   position: absolute;
   left: 35%;
   top: 0%;
 }
+
 .mobile {
   width: 350px;
   margin: 70px 10px 10px 100px;
   border-bottom: 1px solid #000;
 }
+
 .password {
   width: 350px;
   margin: 30px 10px 10px 100px;
   border-bottom: 1px solid #000;
 }
+
 .login-btn {
   width: 350px;
   margin: 30px 10px 10px 100px;
@@ -75,52 +88,64 @@ ul {
   background-color: lightgreen;
   color: #fff;
 }
+
 .no-account {
   margin: 0px 0px 0px 100px;
   top: 40px;
   position: relative;
 }
+
 .forgot {
   position: relative;
   margin: 0px 0px 0px 100px;
-  top: 20px;
+  top: 0px;
 }
+
 .menu-first-icon {
   padding: 2px 5px;
   font-size: 15px;
   color: #b38620f0;
 }
+
 .menu-first {
   padding-left: 50px;
 }
+
 .menu-first-text {
   font-size: 15px;
   color: #b38620f0;
 }
+
 .menu ul {
   display: flex;
   margin-bottom: 0px;
   margin-top: 10px;
 }
+
 .menu ul li a {
   color: #b38620f0;
   font-size: 15px;
   padding: 2px 10px;
 }
+
 .menu span {
   padding: 2px 3px;
 }
+
 .main-header {
-  background-color:#fff;
+  background-color: #fff;
 }
+
 .top-header {
   clear: both;
   border-bottom: 1.5px solid #dbdbdb;
   padding-bottom: 30px;
 }
+
 .top-header .logo {
-  display:flex;
+  display: flex;
 }
+
 .top-header .logo h1 {
   position: absolute;
   top: 20px;
@@ -132,79 +157,105 @@ ul {
   margin-bottom: 0px;
   letter-spacing: 1px;
 }
+
 .top-header .logo h1 span {
   color: #000;
 }
+
 .aslogo {
   border: 5px solid #f0f0f0;
   background-color: #77b81e;
   padding: 10px 10px;
   color: #fff;
 }
+
 .ant-menu-horizontal {
   line-height: 46px;
   margin: 0px 5px;
-  border-bottom: 0px solid #f0f0f0; 
+  border-bottom: 0px solid #f0f0f0;
 }
-.menu-section{
-  border-bottom:1px solid #f0f0f0 !important;
+
+.menu-section {
+  border-bottom: 1px solid #f0f0f0 !important;
 }
+
 .menu-section ul li {
   font-weight: 600;
   font-size: 15px;
 }
+
 .socal-icons {
   margin-left: 0px;
 }
+
 .socal-icons ul li {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
   margin: 0px;
 }
+
 .socal-icons ul {
   display: flex;
   margin-bottom: 0px;
   margin-top: 9px;
 }
+
 .socal-icons ul li a {
   color: #b38620f0;
   font-size: 20px;
   padding: 2px 10px;
 }
+
 .socal-icons-home {
   margin-left: 0px;
 }
+
 .socal-icons-home ul li {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
   margin: 0px;
 }
+
 .socal-icons-home ul {
   display: flex;
   margin-bottom: 0px;
   margin-top: 25px;
 }
+
 .socal-icons-home ul li a {
   color: #b38620f0;
   font-size: 15px;
 }
+
 .search {
   width: 280px;
   margin-left: -140px;
   top: 25px;
   border: none;
   font-size: 20px;
-  border-bottom:2px solid #f0f0f0 !important;
+  border-bottom: 2px solid #f0f0f0 !important;
   position: relative;
 }
+
 .shopping-icon {
   position: absolute;
   margin-left: 20px;
   top: 30px;
   font-size: 40px;
 }
+
+.customProfile {
+  border: 3px solid #ecdc5e;
+  width: 10%;
+}
+
+.customPopoverContent ul li {
+  padding: 10px;
+  font-size: 15px;
+}
+
 /* ----------------------------header css ends------------------------*/
 
 /* ---------------------footer css starts------------------------*/
@@ -216,28 +267,35 @@ ul {
   padding: 114px 0 98px;
   overflow: hidden;
 }
+
 .site-footer .footer-list ul {
   margin-top: 20px;
 }
+
 .site-footer .footer-list ul li {
-  margin:5px 0px
+  margin: 5px 0px
 }
+
 .site-footer .footer-list ul li a {
   color: #c5c9c4;
   font-size: 16px;
   line-height: 30px;
   transition: 1.5s;
 }
+
 .site-footer .footer-list ul li a:hover {
   padding-left: 15px;
   color: #5b8c51;
 }
+
 .footer-widget_title {
   position: relative;
 }
+
 .site-footer .footer-socal-icons ul {
   display: inline-flex;
 }
+
 .site-footer .footer-socal-icons ul li a {
   width: 81px;
   height: 76px;
@@ -247,12 +305,14 @@ ul {
   margin-right: 9px;
   padding-left: 14px;
 }
+
 .footer-widget-text {
   color: #c5c9c4;
   font-size: 16px;
   text-align: justify;
   position: relative;
 }
+
 .footer-widget-text h2 {
   color: #ffffff;
   font-size: 20px;
@@ -260,31 +320,37 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .footer-widget-text ul {
   margin-top: 20px;
 }
+
 .footer-widget-text .contact-email {
   margin-bottom: 0px;
   line-height: 28px;
 }
+
 .footer-widget-text ul li a {
   color: #c5c9c4;
   transition: 1.5s;
 }
+
 .site-footer .footer-widget-text ul li a:hover {
   padding-left: 15px;
   color: #ecdc5e;
 }
+
 .footer-widget-text:before {
   position: absolute;
   top: 33px;
   left: 0;
   height: 4px;
   width: 20px;
-  background:#ecdc5e;
+  background: #ecdc5e;
   content: "";
   border-radius: 5px;
 }
+
 .footer-widget_text {
   color: #c5c9c4;
   margin: 20px 40px 0px 0px;
@@ -292,6 +358,7 @@ ul {
   text-align: justify;
   position: relative;
 }
+
 .footer-widget_text h2 {
   color: #ffffff;
   font-size: 20px;
@@ -299,21 +366,26 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .footer-widget_text ul {
   margin-top: 20px;
 }
+
 .footer-widget_text .contact-email {
   margin-bottom: 0px;
   line-height: 28px;
 }
+
 .footer-widget_text ul li a {
   color: #c5c9c4;
   transition: 1.5s;
 }
+
 .footer-widget_text ul li a:hover {
   padding-left: 15px;
   color: #ecdc5e;
 }
+
 .footer-widget_title h2 {
   color: #ffffff;
   font-size: 20px;
@@ -321,50 +393,60 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .footer-widget_title:before {
   position: absolute;
   top: 33px;
   left: 0;
   height: 4px;
   width: 20px;
-  background:#ecdc5e;
+  background: #ecdc5e;
   content: "";
   border-radius: 5px;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .site-footer-bottom {
   padding: 10px 0 14px;
   background: #394336;
 }
+
 .site-footer_bottom_menu {
   float: right;
   padding-top: 12px;
 }
+
 .site-footer_bottom_copyright p {
   color: #c5c9c4;
   font-size: 16px;
   margin: 0;
   padding-top: 14px;
 }
+
 .site-footer_bottom_menu ul li {
   display: inline-block;
   margin-right: 20px;
 }
+
 .site-footer_bottom_copyright a {
   color: #c5c9c4;
   font-size: 16px;
   transition: all 500ms ease;
 }
+
 .site-footer_bottom_menu ul li a {
   color: #c5c9c4;
   font-size: 16px;
   display: inline-block;
   transition: all 500ms ease;
 }
+
 .site-footer_bottom_menu ul li a:hover {
   color: #eddd5e;
 }
+
 /* ---------------------footer css ends------------------------*/

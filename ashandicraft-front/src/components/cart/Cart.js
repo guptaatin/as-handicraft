@@ -7,19 +7,45 @@ import {
     EnvironmentTwoTone, RightOutlined, LeftOutlined
 } from '@ant-design/icons';
 import { CartTable } from './CartTable';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { http } from '../../utils/http';
+import ApiPath from '../../utils/apiPath';
+import { cartDataAction } from '../../redux/actions';
 
 /* ---------------------component Cart starts------------------------*/
 
 const Cart = (props) => {
     /* ----------------onload api's handler called in useEffect---------------- */
 
+    const state = useSelector((state) => state);
+    const dispatch = useDispatch();
+    const [cartItems, setCartItems] = useState();
+
     useEffect(() => {
         props.title && (document.title = props.title);
-    })
+        const fetchCart = async () => {
+            try {
+                const cart = await http.get(ApiPath.getProductsAndCartOfUser + `/${state.authPage.id}/cart`);
+                setCartItems(cart);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        fetchCart();
+    }, [state.cartPage.quantity_change]);
+
+    const handleClearCart = () => {
+        http.delete(ApiPath.clearCart + `/${cartItems?.id}`)
+            .then((response) => {
+                dispatch(cartDataAction(!state.cartPage.quantity_change));
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
 
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const history = useHistory()
+    const history = useHistory();
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -28,8 +54,8 @@ const Cart = (props) => {
         setIsModalVisible(false);
     };
     const handleCheckout = () => {
-        history.push("/checkout_flow")
-    }
+        history.push("/checkout_flow");
+    };
     return (
         <React.Fragment>
             <section className="breadcrumb">
@@ -46,8 +72,8 @@ const Cart = (props) => {
                         <div className="cart-box">
                             <Row>
                                 <div className="cart-header">
-                                    <h1>My Cart</h1><span><h1>(1 item)</h1></span>
-                                    <Link><h2>CLEAR CART</h2></Link>
+                                    <h1>My Cart</h1><span><h1>({cartItems?.cart_quantity} item)</h1></span>
+                                    <h2><Link to="#" onClick={handleClearCart}>CLEAR CART</Link></h2>
                                     <h3><EnvironmentTwoTone /> Enter Delivery Pincode</h3>
                                     <Button className="add-btn" onClick={showModal}>ADD</Button>
                                     <Modal destroyOnClose={true} centered visible={isModalVisible} onCancel={handleCancel} footer={null} width={350}>
@@ -63,11 +89,11 @@ const Cart = (props) => {
                             </Row>
                             <Row>
                                 <Col span={24}>
-                                    <CartTable />
+                                    <CartTable data={cartItems} />
                                 </Col>
                             </Row>
                             <Row>
-                                <Button className="cart-shopping"><LeftOutlined />CONTINUE SHOPPING</Button>
+                                <Button className="cart-shopping" onClick={() => history.push("/handicrafts")}><LeftOutlined />CONTINUE SHOPPING</Button>
                             </Row>
                         </div>
                     </Col>
@@ -81,8 +107,12 @@ const Cart = (props) => {
                         <div className="cart-checkout">
                             <div className="cart-checkout-info">
                                 <ul>
+                                    <li><h1>Item(s) Quantity</h1></li>
+                                    <li><h1>{cartItems?.cart_quantity}</h1></li>
+                                </ul>
+                                <ul>
                                     <li><h1>Item(s) Total</h1></li>
-                                    <li><h1>₹ 1,999</h1></li>
+                                    <li><h1>₹ {cartItems?.cart_amount}</h1></li>
                                 </ul>
                                 <ul>
                                     <li><h2>Delivery Charge</h2></li>
@@ -92,7 +122,7 @@ const Cart = (props) => {
                             <div className="cart-checkout-amount">
                                 <ul>
                                     <li><h1>Amount Payable</h1></li>
-                                    <li><h1>₹ 1,999</h1></li>
+                                    <li><h1>₹ {cartItems?.cart_amount}</h1></li>
                                 </ul>
                                 <p>INCLUSIVE OF ALL TAXES</p>
                                 <Button className="cart-checkout-btn" onClick={handleCheckout}>CHECKOUT</Button>
@@ -103,7 +133,7 @@ const Cart = (props) => {
             </section>
         </React.Fragment>
     );
-}
+};
 /* ---------------------component Cart ends------------------------*/
 
 export default Cart;

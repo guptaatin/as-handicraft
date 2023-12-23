@@ -1,7 +1,10 @@
 /* ---------------baseurl for customer define---------------*/
 
-const baseURL = "/users";
-
+const userBaseURL = "/user";
+const categoryBaseURL = "/categories";
+const productBaseURL = "/products";
+const authBaseURL = "/auth";
+const cartBaseURL = "/carts";
 
 /* ---------------document baseurl for uploading files define---------------*/
 
@@ -10,8 +13,22 @@ const baseURL = "/users";
 /* ----------------component ApiPath starts------------------*/
 
 const ApiPath = {
-    createUser : `${baseURL}/createUser`,
-}
+    updateUser: `${userBaseURL}/update`,
+    updateProfileImage: `${userBaseURL}/updateProfileImage`,
+    fetchStates: `${userBaseURL}/states`,
+    fetchDistricts: `${userBaseURL}/districts`,
+    createUserAddress: `${userBaseURL}/createUserAddress`,
+    findOneUser: `${userBaseURL}/findOneUser`,
+    findCategories: `${categoryBaseURL}/findCategories`,
+    findAllProducts: `${productBaseURL}/findAllProducts`,
+    addViewToProduct: `${productBaseURL}/addViewToProduct`,
+    findProduct: `${productBaseURL}/findProduct`,
+    signup: `${authBaseURL}/signup`,
+    signin: `${authBaseURL}/signin`,
+    cartCreate: `${cartBaseURL}/cartCreate/users`,
+    getProductsAndCartOfUser: `${cartBaseURL}/getProductsAndCartOfUser/users`,
+    clearCart: `${cartBaseURL}/clearCart`,
+};
 
 /* --------------component ApiPath Ends-------------- */
 

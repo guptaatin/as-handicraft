@@ -1,8 +1,8 @@
-
 /* ---------------------component account-section starts------------------------*/
 .account-section {
     padding: 50px 0px;
 }
+
 .profile-box {
     width: 1225px;
     height: 100vh;
@@ -12,15 +12,18 @@
     transition: all .2s linear;
     margin: 20px 20px;
 }
+
 .profile-box:hover {
-    box-shadow: 0 1px 12px rgba(31,115,212,.6);
+    box-shadow: 0 1px 12px rgba(31, 115, 212, .6);
     cursor: pointer;
 }
-.back-avatar-uploader > .ant-upload {
+
+.back-avatar-uploader>.ant-upload {
     width: 100%;
     height: 250px;
 }
-.profile-avatar-uploader > .ant-upload {
+
+.profile-avatar-uploader>.ant-upload {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -30,23 +33,28 @@
     border-color: grey;
     box-shadow: 0 0 5px rgb(24 132 66 / 60%);
 }
+
 .dummy-back-profile {
     width: 1225px;
     height: 250px;
 }
+
 .dummy-profile {
     border-radius: 50%;
     width: 200px;
     height: 200px;
 }
+
 .profile-box h2 {
     text-align: center;
     margin-top: 100px;
 }
+
 .options-boxes {
     margin: 20px 40px 10px 60px;
     display: flex;
 }
+
 .each-box {
     width: 200px;
     height: 120px;
@@ -57,19 +65,24 @@
     padding: 15px 15px;
     margin: 20px 10px;
 }
+
 .each-box ul {
     display: flex;
 }
+
 .option-icon {
     font-size: 16px;
 }
+
 .options-list ul {
     display: block;
     margin-left: 15px;
 }
+
 .options-list li {
     margin-top: -2px;
 }
+
 .options-list p {
     font-size: 12px;
     color: grey;
@@ -77,12 +90,13 @@
 
 /* ---------------------component account-section ends------------------------*/
 
-.profile-back-avatar-uploader > .ant-upload {
+.profile-back-avatar-uploader>.ant-upload {
     width: 300px;
     height: 150px;
     margin: -23px 0px 0px -23px;
 }
-.profile-front-avatar-uploader > .ant-upload {
+
+.profile-front-avatar-uploader>.ant-upload {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -92,6 +106,7 @@
     border-color: grey;
     box-shadow: 0 0 5px rgb(24 132 66 / 60%);
 }
+
 /* .dummy-back-profile {
     width: 1225px;
     height: 250px;
@@ -101,30 +116,37 @@
     width: 150px;
     height: 150px;
 }
+
 .more-profile-info ul {
     display: block;
     margin: 50px 10px -70px -10px;
 }
+
 .more-profile-info h4 {
     color: grey;
 }
+
 .profile-input {
     width: 270px;
-    height: 40px;
+    height: 65px;
+    font-size: 20px;
     border-radius: 10px;
 }
+
 .gender ul {
     margin: 0px 0px 0px 0px;
 }
+
 .gender-radio {
     height: 40px;
     padding: 5px 44px 0px 44px;
     color: grey;
 }
+
 .profile-save-btn {
     font-size: 1.0rem;
     margin: 10px 5px 10px 5px;
-    width: 280px;
+    width: 279px;
     height: 40px;
     padding: 5px 0px;
     background-color: #a0b410;
@@ -132,8 +154,33 @@
     color: #fff;
     border-radius: 10px;
 }
+
 .profile-save-btn:hover {
     background-color: #8a9b07;
     color: #fff;
     border-color: #8a9b07;
+}
+
+.space-align-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.space-align-block {
+    flex: none;
+    margin: 20px 4px;
+    padding: 0px;
+    border: 1px solid #40a9ff;
+}
+
+.space-align-block .mock-block {
+    display: inline-block;
+    padding: 20px 8px 16px;
+    background: rgba(150, 150, 150, 0.2);
+}
+
+.gutter-box {
+    padding: 8px 0;
+    background: #00a0e9;
 }

@@ -37,7 +37,7 @@ const App = () => {
             <Switch>
               <Route exact path="/" render={(props) => <Home {...props} title="Home | ASHandicraft" />} />
               <Route exact path="/handicrafts" render={(props) => <Handicrafts {...props} title="Handicrafts | ASHandicraft" />} />
-              <Route exact path="/handicraft_item" render={(props) => <Handicraft_item {...props} title="Handicraft_item | ASHandicraft" />} />
+              <Route exact path="/handicraft_item/:productId" render={(props) => <Handicraft_item {...props} title="Handicraft_item | ASHandicraft" />} />
               <Route exact path="/cart" render={(props) => <Cart {...props} title="Cart | ASHandicraft" />} />
               <Route exact path="/checkout_flow" render={(props) => <Checkout_Flow {...props} title="Checkout_Flow | ASHandicraft" />} />
               <Route exact path="/order_confirmation" render={(props) => <Order_Confirmation {...props} title="Order_Confirmation | ASHandicraft" />} />
@@ -53,7 +53,7 @@ const App = () => {
       </Router>
     </Layout>
   );
-}
+};
 
 /* --------------component App Ends-------------- */
 

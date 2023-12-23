@@ -1,45 +1,69 @@
 module.exports = (sequelize, Sequelize) => {
 	const User = sequelize.define("user", {
-		UserId: {
-			type: Sequelize.INTEGER,
-			primaryKey: true,
-			notNull: true,
-			autoIncrement: true,
+		userName: {
+			type: Sequelize.STRING
 		},
-		FirstName: {
+		email: {
+			type: Sequelize.STRING
+		},
+		password: {
+			type: Sequelize.STRING
+		},
+		firstName: {
 			type: Sequelize.STRING,
 		},
-		LastName: {
+		lastName: {
 			type: Sequelize.STRING,
 		},
-		Email: {
+		prefixMobile: {
+			type: Sequelize.STRING
+		},
+		mobile: {
 			type: Sequelize.STRING,
 		},
-		Mobile: {
+		gender: {
+			type: Sequelize.STRING
+		},
+		dateOfBirth: {
 			type: Sequelize.STRING,
 		},
-		Status: {
+		status: {
 			type: Sequelize.ENUM("1", "0"),
 			defaultValue: "0",
 		},
-		AdminStatus: {
+		adminStatus: {
 			type: Sequelize.ENUM("1", "0"),
 			defaultValue: "0",
 		},
-		UserPassword: {
+		isEmailVerified: {
+			type: Sequelize.ENUM("1", "0"),
+			defaultValue: "0",
+		},
+		registerStatus: {
+			type: Sequelize.ENUM("1", "0"),
+			defaultValue: "0",
+		},
+		isMobileVerified: {
+			type: Sequelize.ENUM("1", "0"),
+			defaultValue: "0",
+		},
+		type: {
 			type: Sequelize.STRING,
 		},
-		IsEmailVerified: {
-			type: Sequelize.ENUM("1", "0"),
-			defaultValue: "0",
+		name: {
+			type: Sequelize.STRING,
 		},
-		RegisterStatus: {
-			type: Sequelize.ENUM("1", "0"),
-			defaultValue: "0",
+		data: {
+			type: Sequelize.BLOB("long"),
 		},
-		IsMobileVerified: {
-			type: Sequelize.ENUM("1", "0"),
-			defaultValue: "0",
+		cover_type: {
+			type: Sequelize.STRING,
+		},
+		cover_name: {
+			type: Sequelize.STRING,
+		},
+		cover_data: {
+			type: Sequelize.BLOB("long"),
 		}
 	});
 
